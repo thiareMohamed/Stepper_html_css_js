@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="app/style.css">
+    <title>Stepper</title>
+</head>
+<body>
+    
+    <div>
+        <h1>Simple Stepper</h1>
+        <div id="multi-step-form-container">
+            <ul class="form-stepper form-stepper-horizontal text-center mx-auto pl-0">
+                <!-- Step 1 -->
+                <li class="form-stepper-active text-center form-stepper-list" step="1">
+                    <a class="mx-2">
+                        <span class="form-stepper-circle">
+                            <span>1</span>
+                        </span>
+                        <div class="label">Sélection des stations concernées</div>
+                    </a>
+                </li>
+                <!-- Step 2 -->
+                <li class="form-stepper-unfinished text-center form-stepper-list" step="2">
+                    <a class="mx-2">
+                        <span class="form-stepper-circle text-muted">
+                            <span>2</span>
+                        </span>
+                        <div class="label text-muted">Affectaion des gerants</div>
+                    </a>
+                </li>
+                <!-- Step 3 -->
+                <li class="form-stepper-unfinished text-center form-stepper-list" step="3">
+                    <a class="mx-2">
+                        <span class="form-stepper-circle text-muted">
+                            <span>3</span>
+                        </span>
+                        <div class="label text-muted">Confirmation</div>
+                    </a>
+                </li>
+            </ul>
+            <!-- Step Wise Form Content -->
+            <form id="userAccountSetupForm" name="userAccountSetupForm" enctype="multipart/form-data" method="POST">
+                <!-- Step 1 Content -->
+                <section id="step-1" class="form-step">
+                    <h2 class="font-normal">Sélection des stations concernées</h2>
+                    <!-- Step 1 input fields -->
+
+                    <div class="mt-3 d-flex justify-content-end">
+                        <button class="button btn-navigate-form-step" type="button" step_number="2">Suivant</button>
+                    </div>
+                    <table>
+                        <ul id = "limheight">
+                            <li><a href="">Glee is awesome 1</a></li>
+                            <li><a href="">Glee is awesome 1</a></li>
+                            <li><a href="">Glee is awesome 1</a></li>
+                            <li><a href="">Glee is awesome 1</a></li>
+                            <li><a href="">Glee is awesome 1</a></li>
+                            <li><a href="">Glee is awesome 1</a></li>
+                            <li><a href="">Glee is awesome 1</a></li>
+                            <li><a href="">Glee is awesome 1</a></li>
+                            <li><a href="">Glee is awesome 1</a></li>
+                            <li><a href="">Glee is awesome 1</a></li>
+                            <li><a href="">Glee is awesome 1</a></li>
+                            <li><a href="">Glee is awesome 1</a></li>
+                            <li><a href="">Glee is awesome 1</a></li>
+                            <li><a href="">Glee is awesome 1</a></li>
+                            <li><a href="">Glee is awesome 1</a></li>
+                            <li><a href="">Glee is awesome 1</a></li>
+                            <li><a href="">Glee is awesome 1</a></li>
+                            <li><a href="">Glee is awesome 1</a></li>
+                            <li><a href="">Glee is awesome 1</a></li>
+                            <li><a href="">Glee is awesome 1</a></li>
+                            <li><a href="">Glee is awesome 1</a></li>
+                        </ul>
+                    </table>
+                </section>
+                <!-- Step 2 Content, default hidden on page load. -->
+                <section id="step-2" class="form-step d-none">
+                    <h2 class="font-normal">Affectaion des gerants</h2>
+                    <div class="mt-3 d-flex justify-content-end">
+                        <button class="button btn-navigate-form-step" type="button" step_number="1">Retour</button>
+                        <button class="button btn-navigate-form-step" type="button" step_number="3">Suivant</button>
+                    </div>
+                    <!-- Step 2 input fields -->
+                    <div class="mt-3">
+                        Step 2 input fields goes here..
+                    </div>
+                </section>
+                
+                <!-- Step 3 Content, default hidden on page load. -->
+                <section id="step-3" class="form-step d-none">
+                    <h2 class="font-normal">Confirmation</h2>
+                    <div class="mt-3 d-flex justify-content-end">
+                        <button class="button btn-navigate-form-step" type="button" step_number="2">Retour</button>
+                        <button class="button submit-btn" type="submit">Affecter</button>
+                    </div>
+                    <!-- Step 3 input fields -->
+                    <div class="mt-3">
+                        Step 3 input fields goes here..
+                    </div>
+                </section>
+            </form>
+        </div>
+    </div>
+
+    <script src="app/main.js"></script>
+</body>
+</html>
